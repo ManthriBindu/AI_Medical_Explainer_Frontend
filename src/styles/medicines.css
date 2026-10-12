@@ -1,0 +1,179 @@
+/* Medicines & Schedule Styles */
+.medicine-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 22px;
+  margin-top: 24px;
+}
+
+.medicine-card {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-subtle);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: var(--transition-smooth);
+}
+.medicine-card:hover {
+  box-shadow: var(--shadow-card);
+  border-color: var(--color-primary);
+}
+
+.medicine-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.medicine-name {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.medicine-dosage-badge {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.9rem;
+}
+
+.medicine-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 16px 0 20px 0;
+  font-size: 1.05rem;
+  color: var(--text-muted);
+}
+.medicine-detail-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.medicine-actions {
+  display: flex;
+  gap: 10px;
+  border-top: 1px solid var(--color-border);
+  padding-top: 18px;
+}
+
+/* Schedule Timeline */
+.schedule-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.schedule-card {
+  background: #ffffff;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 22px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--shadow-subtle);
+  transition: var(--transition-smooth);
+}
+.schedule-card.taken {
+  border-color: var(--color-green-border);
+  background: #fbfdfc;
+}
+.schedule-card.missed {
+  border-color: var(--color-red-border);
+  background: #fffafa;
+}
+
+.schedule-time-box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.schedule-clock-badge {
+  background: var(--bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 10px 16px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.schedule-med-info h4 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 4px;
+}
+.schedule-med-info p {
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+.schedule-action-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Drug Interaction Checker */
+.interaction-container {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.selected-tags-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 14px;
+  background: var(--bg-secondary);
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  margin-bottom: 20px;
+  min-height: 54px;
+  align-items: center;
+}
+
+.medicine-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+}
+.medicine-tag button {
+  color: var(--color-primary);
+  display: flex;
+}
+
+.interaction-result-card {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--color-border);
+  padding: 28px;
+  margin-top: 28px;
+  box-shadow: var(--shadow-card);
+}
+.interaction-result-card.caution {
+  border-color: var(--color-amber);
+}
+.interaction-result-card.danger {
+  border-color: var(--color-red);
+}
+.interaction-result-card.safe {
+  border-color: var(--color-green);
+}

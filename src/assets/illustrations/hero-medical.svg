@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#eff6ff"/>
+      <stop offset="100%" stop-color="#dbeafe"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background Soft Capsule -->
+  <rect x="30" y="20" width="440" height="360" rx="32" fill="url(#bgGrad)"/>
+  <circle cx="410" cy="70" r="40" fill="#bfdbfe" opacity="0.6"/>
+  <circle cx="70" cy="330" r="50" fill="#bfdbfe" opacity="0.4"/>
+
+  <!-- Main Document Card -->
+  <g filter="url(#cardShadow)">
+    <rect x="90" y="50" width="280" height="300" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+    
+    <!-- Document Header -->
+    <rect x="115" y="75" width="40" height="40" rx="8" fill="#0f62fe"/>
+    <path d="M135 83v24M123 95h24" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+    <rect x="170" y="80" width="120" height="12" rx="6" fill="#0f172a"/>
+    <rect x="170" y="100" width="80" height="8" rx="4" fill="#94a3b8"/>
+    
+    <!-- Divider -->
+    <line x1="115" y1="130" x2="345" y2="130" stroke="#f1f5f9" stroke-width="2"/>
+
+    <!-- Test Rows -->
+    <!-- Row 1: Hemoglobin -->
+    <rect x="115" y="150" width="70" height="10" rx="5" fill="#334155"/>
+    <rect x="115" y="165" width="45" height="8" rx="4" fill="#64748b"/>
+    <rect x="250" y="152" width="75" height="22" rx="11" fill="#ecfdf5"/>
+    <text x="287" y="167" font-family="sans-serif" font-size="11" font-weight="bold" fill="#059669" text-anchor="middle">12.5 Normal</text>
+
+    <!-- Row 2: Glucose -->
+    <rect x="115" y="195" width="85" height="10" rx="5" fill="#334155"/>
+    <rect x="115" y="210" width="55" height="8" rx="4" fill="#64748b"/>
+    <rect x="245" y="197" width="85" height="22" rx="11" fill="#fffbeb"/>
+    <text x="287" y="212" font-family="sans-serif" font-size="11" font-weight="bold" fill="#d97706" text-anchor="middle">145 Attention</text>
+
+    <!-- Row 3: Creatinine -->
+    <rect x="115" y="240" width="60" height="10" rx="5" fill="#334155"/>
+    <rect x="115" y="255" width="40" height="8" rx="4" fill="#64748b"/>
+    <rect x="250" y="242" width="75" height="22" rx="11" fill="#ecfdf5"/>
+    <text x="287" y="257" font-family="sans-serif" font-size="11" font-weight="bold" fill="#059669" text-anchor="middle">0.9 Normal</text>
+
+    <!-- AI Explanation Bubble Inside -->
+    <rect x="115" y="285" width="230" height="45" rx="10" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1.5"/>
+    <rect x="130" y="297" width="160" height="8" rx="4" fill="#0284c7"/>
+    <rect x="130" y="311" width="120" height="7" rx="3.5" fill="#7dd3fc"/>
+  </g>
+
+  <!-- Floating Pill Card: Medication Reminder -->
+  <g filter="url(#cardShadow)">
+    <rect x="270" y="230" width="190" height="90" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+    <circle cx="300" cy="265" r="18" fill="#eff6ff"/>
+    <path d="M293 265h14M300 258v14" stroke="#0f62fe" stroke-width="3" stroke-linecap="round"/>
+    <text x="330" y="260" font-family="sans-serif" font-size="13" font-weight="bold" fill="#0f172a">Metformin 500mg</text>
+    <text x="330" y="278" font-family="sans-serif" font-size="11" fill="#64748b">08:00 AM • After Food</text>
+    <rect x="330" y="290" width="65" height="18" rx="9" fill="#ecfdf5"/>
+    <text x="362" y="303" font-family="sans-serif" font-size="10" font-weight="bold" fill="#059669" text-anchor="middle">✓ Taken</text>
+  </g>
+
+  <!-- Stethoscope / Health Badge -->
+  <g filter="url(#cardShadow)">
+    <circle cx="95" cy="180" r="28" fill="#0f62fe"/>
+    <path d="M85 180h5l3-6 5 12 4-8 3 4h6" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
